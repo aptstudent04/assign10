@@ -1,11 +1,16 @@
 {
-  "name": "assign10app1",
+  "name": "assign10app2",
   "version": "1.0.0",
-  "description": "Test",
-  "main": "app1.js",
+  "description": "App2",
+  "main": "app2.js",
   "type": "commonjs",
+
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app2.js"
+  },
+  "repository": {
+    "type": "git"
   },
   "author": "",
   "license": "ISC",
