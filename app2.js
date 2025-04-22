@@ -56,8 +56,12 @@ http.createServer(function (req, res) {
             }
             console.log(myPlace);
 
-            res.write("Location Name: " + myPlace.Name + "<br/>");
-            res.write("Location Zips: " + myPlace.zips + "<br/>");
+            if (myPlace != null) {
+                res.write("Location Name: " + myPlace.Name + "<br/>");
+                res.write("Location Zips: " + myPlace.zips + "<br/>");
+            } else {
+                res.write("Location Unknown!<br/>");
+            }
 
           } catch (err) {
             console.error(err);
@@ -66,7 +70,7 @@ http.createServer(function (req, res) {
           }
           
 
-          res.write ("<p>The Location is " + loc + "</p>");
+          res.write ("<p>The Original Search Term was " + loc + "</p>");
           res.end();
           });
     }
